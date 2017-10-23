@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017.
+  ~
+  ~ Anthony Ngure
+  ~
+  ~ Email : anthonyngure25@gmail.com
+  -->
+
+<resources>
+    <style name="Theme.ActionBar.SubtitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textSize">@dimen/subtitle_text_size</item>
+        <item name="android:textColor">#eeffffff</item>
+    </style>
+
+    <style name="Theme.ActionBar.TitleTextStyle.Condensed" parent="@style/Theme.ActionBar.TitleTextStyle">
+        <item name="android:textSize">@dimen/condensed_title_text_size</item>
+    </style>
+
+    <style name="Theme.ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

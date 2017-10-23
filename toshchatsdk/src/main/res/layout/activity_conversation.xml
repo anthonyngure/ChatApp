@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017.
+  ~
+  ~ Anthony Ngure
+  ~
+  ~ Email : anthonyngure25@gmail.com
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ke.co.toshngure.chatsdk.ConversationActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetStart="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/colorPrimary">
+
+                <LinearLayout
+                    android:id="@+id/backAction"
+                    style="@style/Widget.AppCompat.ActionBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:enabled="false"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingLeft="0.0dip"
+                    android:paddingRight="4.0dip"
+                    android:layout_alignParentStart="true"
+                    android:paddingStart="0.0dip"
+                    android:paddingEnd="4.0dip">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_arrow_back_black_24dp"
+                        android:tint="@android:color/white" />
+
+                    <ke.co.toshngure.basecode.images.BaseNetworkImage
+                        android:id="@+id/avatarNI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:layout_marginRight="0.0dip"
+                        app:circled="true"
+                        app:circledImageSize="40dip"
+                        android:layout_marginEnd="0.0dip" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/Widget.AppCompat.ActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/backAction"
+                    android:clickable="true"
+                    android:clipChildren="false"
+                    android:orientation="vertical"
+                    android:paddingBottom="2.0dip"
+                    android:paddingLeft="4.0dip"
+                    android:paddingRight="0.0dip"
+                    android:paddingTop="0.0dip"
+                    android:paddingStart="4.0dip"
+                    android:paddingEnd="0.0dip"
+                    android:layout_toEndOf="@id/backAction">
+
+                    <TextView
+                        android:id="@+id/titleTV"
+                        style="@style/Theme.ActionBar.TitleTextStyle.Condensed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/app_name" />
+
+
+                    <TextView
+                        android:id="@+id/subTitleTV"
+                        style="@style/Theme.ActionBar.SubtitleTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/app_name"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_conversation" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

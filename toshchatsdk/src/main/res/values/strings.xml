@@ -1,0 +1,14 @@
+<!--
+  ~ Copyright (c) 2017.
+  ~
+  ~ Anthony Ngure
+  ~
+  ~ Email : anthonyngure25@gmail.com
+  -->
+
+<resources>
+    <string name="app_name">Tosh Chat SDK</string>
+    <string name="title_activity_conversation">Conversation</string>
+    <string name="last_seen_today">today at %1$s </string>
+    <string name="last_seen_yesterday">yesterday at %1$s </string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true">
+        <processorPath>
+          <entry name="E:/AndroidStudioProjects2016/CodeGenerator/processor/src/main/java/com/toshngure/codegenerator/processor/CustomAnottationProcessor.java" />
+        </processorPath>
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
