@@ -7,7 +7,7 @@
   ~ Email : anthonyngure25@gmail.com
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,4 +16,47 @@
     tools:context="ke.co.toshngure.chatsdk.ConversationActivity"
     tools:showIn="@layout/activity_conversation">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/chatBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_chat"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/textInputView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/background_message_input"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp">
+
+            <FrameLayout
+                android:id="@+id/quotedMessageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="5dp">
+                <include layout="@layout/layout_quoted_message"/>
+            </FrameLayout>
+
+
+            <include layout="@layout/layout_text_input"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_simple_recyclerview"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

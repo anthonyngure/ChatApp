@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_quoted_message"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:minWidth="120dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/quotedColorView"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/quotedSenderNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textColor="@color/quoted_message_text_color" />
+
+            <TextView
+                android:id="@+id/quotedTextTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/lorem_text" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/quotedCancelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end|top"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp"
+        android:visibility="gone"
+        android:paddingStart="12dp"
+        android:paddingEnd="2dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_clear_black_24dp" />
+
+    </FrameLayout>
+
+</FrameLayout>

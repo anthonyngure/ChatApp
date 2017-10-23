@@ -6,13 +6,14 @@
   ~ Email : anthonyngure25@gmail.com
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ke.co.toshngure.chatsdk">
 
+    <uses-sdk
+        tools:overrideLibrary="com.vanniktech.emoji.ios" />
+
     <application>
-        <activity
-            android:name=".ConversationActivity"
-            android:label="@string/title_activity_conversation"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

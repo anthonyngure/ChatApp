@@ -10,6 +10,9 @@ package ke.co.toshngure.chatsdk;
 
 import android.content.Context;
 
+import com.vanniktech.emoji.EmojiManager;
+import com.vanniktech.emoji.ios.IosEmojiProvider;
+
 /**
  * Created by Anthony Ngure on 04/10/2017.
  * Email : anthonyngure25@gmail.com.
@@ -27,7 +30,7 @@ public class ChatSDK {
     public static ChatSDK init(Context context) {
         if (mInstance  == null){
             mInstance = new ChatSDK(context);
-
+            EmojiManager.install(new IosEmojiProvider());
         }
         return mInstance;
     }

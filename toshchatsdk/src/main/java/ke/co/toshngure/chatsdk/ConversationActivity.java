@@ -35,7 +35,7 @@ public class ConversationActivity extends BaseAppActivity {
     protected void setupToolbar() {
         super.setupToolbar();
         BaseNetworkImage avatarNI = findViewById(R.id.avatarNI);
-        avatarNI.loadImageFromNetwork(mConversation.getPartner().getAvatar());
+        //avatarNI.loadImageFromNetwork(mConversation.getPartnerAvatar());
         TextView titleTV = findViewById(R.id.titleTV);
         titleTV.setText(mConversation.getPartner().getName());
         TextView subTitleTV = findViewById(R.id.subTitleTV);

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="outgoing_message_background">#3F51B5</color>
+    <color name="incoming_message_background">#303F9F</color>
+    <color name="outgoing_message_text_color">#FFFFFF</color>
+    <color name="incoming_message_text_color">#FFFFFF</color>
+
+    <color name="quoted_message_text_color">@android:color/primary_text_light_nodisable</color>
+    <color name="quoted_message_background">#FFFFFF</color>
+</resources>
