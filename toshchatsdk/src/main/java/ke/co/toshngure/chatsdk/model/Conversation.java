@@ -1,12 +1,15 @@
 package ke.co.toshngure.chatsdk.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.Generated;
 
 @Entity(nameInDb = "conversations")
-public class Conversation {
+public class Conversation implements Parcelable {
 
     @NotNull
     @Id
@@ -124,4 +127,47 @@ public class Conversation {
     public void setPartnerMessageTextColor(int partnerMessageTextColor) {
         this.partnerMessageTextColor = partnerMessageTextColor;
     }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeLong(this.id);
+        dest.writeInt(this.unread);
+        dest.writeString(this.background);
+        dest.writeLong(this.partnerId);
+        dest.writeLong(this.lastMessageId);
+        dest.writeInt(this.myMessageBackground);
+        dest.writeInt(this.myMessageTextColor);
+        dest.writeInt(this.partnerMessageBackground);
+        dest.writeInt(this.partnerMessageTextColor);
+    }
+
+    protected Conversation(Parcel in) {
+        this.id = in.readLong();
+        this.unread = in.readInt();
+        this.background = in.readString();
+        this.partnerId = in.readLong();
+        this.lastMessageId = in.readLong();
+        this.myMessageBackground = in.readInt();
+        this.myMessageTextColor = in.readInt();
+        this.partnerMessageBackground = in.readInt();
+        this.partnerMessageTextColor = in.readInt();
+    }
+
+    public static final Parcelable.Creator<Conversation> CREATOR = new Parcelable.Creator<Conversation>() {
+        @Override
+        public Conversation createFromParcel(Parcel source) {
+            return new Conversation(source);
+        }
+
+        @Override
+        public Conversation[] newArray(int size) {
+            return new Conversation[size];
+        }
+    };
 }

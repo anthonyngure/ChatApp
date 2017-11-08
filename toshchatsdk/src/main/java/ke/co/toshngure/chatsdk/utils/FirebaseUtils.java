@@ -21,7 +21,7 @@ import ke.co.toshngure.chatsdk.model.BaseUser;
  */
 public class FirebaseUtils {
 
-    public static final int VERSION = 12;
+    public static final int VERSION = 1;
     public static final String CHATS_CHILD = "chats_v" + VERSION;
     public static final String UNREAD_MESSAGES_CHILD = "unread_messages_v" + VERSION;
     public static final String TYPING_CHILD = "typing";
@@ -32,6 +32,9 @@ public class FirebaseUtils {
     private static final String TAG = FirebaseUtils.class.getSimpleName();
     public static String MESSAGES = "messages";
     private static DatabaseReference mLocalUserUnreadMessagesRef;
+
+
+
     public static DatabaseReference getUserConnectedStatusRef(long userId) {
         return FirebaseDatabase.getInstance().getReference("users/" + userId + "/lastConnected");
     }

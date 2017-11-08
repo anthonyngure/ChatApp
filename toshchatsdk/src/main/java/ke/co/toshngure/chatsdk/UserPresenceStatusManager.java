@@ -8,8 +8,6 @@
 
 package ke.co.toshngure.chatsdk;
 
-import android.content.Context;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,8 +42,8 @@ public class UserPresenceStatusManager implements ValueEventListener {
         return mInstance;
     }
 
-    public static boolean isUserPresent(Context context) {
-        return (userPresent && BaseUtils.canConnect(context));
+    public static boolean isUserPresent() {
+        return (userPresent && BaseUtils.canConnect(ChatSDK.getInstance().getContext()));
     }
 
     public void add(BaseUser user, long chatId){

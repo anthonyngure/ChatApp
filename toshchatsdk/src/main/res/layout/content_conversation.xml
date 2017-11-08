@@ -26,20 +26,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="8dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/textInputView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/background_message_input"
+            android:background="@android:color/white"
             android:layout_alignParentBottom="true"
-            android:orientation="vertical"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp">
+            android:orientation="vertical">
 
             <FrameLayout
                 android:id="@+id/quotedMessageView"
@@ -50,12 +45,20 @@
                 <include layout="@layout/layout_quoted_message"/>
             </FrameLayout>
 
-
             <include layout="@layout/layout_text_input"/>
 
         </LinearLayout>
 
-        <include layout="@layout/layout_simple_recyclerview"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="8dp"
+            android:layout_above="@id/textInputView">
+            <include layout="@layout/layout_simple_recyclerview"/>
+        </FrameLayout>
+
+
 
     </RelativeLayout>
 

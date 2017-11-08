@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ke.co.toshngure.chatsdk.view.ChatMessageView
+        android:id="@+id/messageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <LinearLayout
+            android:id="@+id/messageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/quotedMessageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                <include layout="@layout/layout_quoted_message"/>
+            </FrameLayout>
+
+            <com.vanniktech.emoji.EmojiTextView
+                android:id="@+id/messageTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:focusableInTouchMode="false"
+                android:text="@string/lorem_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21:00"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <ImageView
+                    android:id="@+id/statusIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    app:srcCompat="@drawable/traffic_message_unsent"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ke.co.toshngure.chatsdk.view.ChatMessageView>
+
+    <FrameLayout
+        android:id="@+id/selectedOverlayView"
+        android:background="@color/bg_selected_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>

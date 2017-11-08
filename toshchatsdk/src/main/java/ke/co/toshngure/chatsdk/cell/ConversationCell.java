@@ -6,7 +6,7 @@
  * Email : anthonyngure25@gmail.com
  */
 
-package ke.co.toshngure.chatapp.cell;
+package ke.co.toshngure.chatsdk.cell;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import com.jaychang.srv.SimpleCell;
 import com.jaychang.srv.SimpleViewHolder;
 
-import ke.co.toshngure.chatapp.model.Conversation;
+import ke.co.toshngure.chatsdk.model.Conversation;
 
 
 /**

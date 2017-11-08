@@ -6,7 +6,7 @@
  * Email : anthonyngure25@gmail.com
  */
 
-package ke.co.toshngure.chatapp.model;
+package ke.co.toshngure.chatsdk.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -24,15 +24,14 @@ public class ChatSDK {
     private static ChatSDK mInstance;
 
     private ChatSDK(Context context) {
-        this.context = context;
+        this.context = context.getApplicationContext();
     }
 
-    public static ChatSDK init(Context context) {
+    public static void init(Context context) {
         if (mInstance  == null){
-            mInstance = new ChatSDK(context);
+            mInstance = new ChatSDK(context.getApplicationContext());
             EmojiManager.install(new IosEmojiProvider());
         }
-        return mInstance;
     }
 
     public static ChatSDK getInstance() {

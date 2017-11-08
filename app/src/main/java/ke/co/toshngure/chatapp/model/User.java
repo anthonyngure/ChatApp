@@ -20,6 +20,7 @@ import ke.co.toshngure.chatsdk.model.BaseUser;
 public class User implements BaseUser {
 
     private long id;
+    private long lastSeen;
     private String name;
     private String avatar;
 
@@ -35,6 +36,11 @@ public class User implements BaseUser {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public long getLastSeen() {
+        return lastSeen;
     }
 
     public void setName(String name) {

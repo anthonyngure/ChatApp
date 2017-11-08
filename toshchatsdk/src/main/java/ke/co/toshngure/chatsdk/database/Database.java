@@ -13,7 +13,7 @@ package ke.co.toshngure.chatsdk.database;
  */
 public class Database extends DatabaseImpl {
 
-    private static final String DB_NAME = "data.db";
+    private static final String DB_NAME = "messages.db";
     private static volatile Database mInstance;
     private Database() {
         super(DB_NAME);

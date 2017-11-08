@@ -71,3 +71,6 @@ configurations.all {
     }
     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
+
+
+apply plugin: 'com.google.gms.google-services'

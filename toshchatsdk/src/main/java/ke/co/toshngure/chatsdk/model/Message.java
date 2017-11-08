@@ -11,7 +11,7 @@ import org.greenrobot.greendao.annotation.Unique;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.DaoException;
 
-@Entity
+@Entity(nameInDb = "messages")
 public class Message implements Parcelable {
 
 
@@ -42,6 +42,18 @@ public class Message implements Parcelable {
     private long quotedSenderId;
     private String quotedServerKey;
     private String quotedText;
+
+    public static final Creator<Message> CREATOR = new Creator<Message>() {
+        @Override
+        public Message createFromParcel(Parcel in) {
+            return new Message(in);
+        }
+
+        @Override
+        public Message[] newArray(int size) {
+            return new Message[size];
+        }
+    };
 
     public String getQuotedText() {
         return quotedText;

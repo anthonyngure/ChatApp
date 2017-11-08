@@ -8,8 +8,6 @@
 
 package ke.co.toshngure.chatsdk;
 
-import android.content.Context;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -64,15 +62,15 @@ public class UserConnectedStatusManager implements ValueEventListener {
         ConversationUtils.onUserConnected();
     }
 
-    public static boolean isUserOnline(BaseUser user, Context context) {
-        return (mOnlineUserList.contains(user.getId()) && BaseUtils.canConnect(context));
+    public static boolean isUserOnline(BaseUser user) {
+        return (mOnlineUserList.contains(user.getId()) && BaseUtils.canConnect(ChatSDK.getInstance().getContext()));
     }
 
     private String databaseRefToString(DatabaseReference reference){
         return reference.getRef().toString();
     }
 
-    public void add(BaseUser user, Context context){
+    public void add(BaseUser user){
         DatabaseReference userConnectedStatusRef = FirebaseUtils.getUserConnectedStatusRef(user.getId());
         if (!mUserConnectedStatusRefs.containsKey(databaseRefToString(userConnectedStatusRef))) {
             userConnectedStatusRef.addValueEventListener(this);

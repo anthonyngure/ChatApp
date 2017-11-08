@@ -11,4 +11,19 @@
     <string name="title_activity_conversation">Conversation</string>
     <string name="last_seen_today">today at %1$s </string>
     <string name="last_seen_yesterday">yesterday at %1$s </string>
+    <string name="online">online</string>
+    <string name="typing">typing…</string>
+    <string name="action_present">Present</string>
+    <string name="action_clear_conversation">Clear conversation</string>
+    <string name="action_chat_colors">Chat colors</string>
+    <string name="action_background">Background</string>
+    <string name="action_no_background">No background</string>
+    <string name="action_change_background">Change background</string>
+    <string name="you">You</string>
+    <string name="pref_global_partner_message_text_color">global_partner_message_text_color</string>
+    <string name="pref_global_partner_message_background">global_partner_message_background</string>
+    <string name="pref_global_my_message_text_color">global_my_message_text_color</string>
+    <string name="pref_global_my_message_background">global_my_message_background</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
 </resources>

@@ -43,7 +43,7 @@ android {
 }
 
 greendao {
-    schemaVersion 5
+    schemaVersion 6
 }
 
 
@@ -61,7 +61,7 @@ dependencies {
         changing = true
     }
 
-    compile 'com.vanniktech:emoji-ios:0.5.1'
+    implementation 'com.vanniktech:emoji-ios:0.5.1'
 
     /*BaseCode dependencies*/
     implementation 'org.greenrobot:greendao:3.2.2'

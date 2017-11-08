@@ -3,11 +3,16 @@ package ke.co.toshngure.chatsdk.utils;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 
 import ke.co.toshngure.basecode.utils.DatesHelper;
+import ke.co.toshngure.basecode.utils.PrefUtilsImpl;
 import ke.co.toshngure.chatsdk.ChatSDK;
 import ke.co.toshngure.chatsdk.R;
+import ke.co.toshngure.chatsdk.database.Database;
+import ke.co.toshngure.chatsdk.model.BaseUser;
+import ke.co.toshngure.chatsdk.model.Conversation;
 import ke.co.toshngure.chatsdk.model.Message;
 
 /**
@@ -64,49 +69,7 @@ public class MessageUtils {
 
 
 
-    /*public static Conversation newChat(BaseUser user) {
-        Conversation chat = new Conversation();
-        chat.setId(PrefUtils.getInstance().getUser().getId() + user.getId());
-        chat.setPartnerId(user.getId());
-        chat.setUnread(0);
-        chat.setFriend(user);
-        setChatDefaults(chat);
-        Database.getInstance().getUserDao().insertOrReplace(user);
-        Database.getInstance().getChatDao().insertOrReplace(chat);
-        return chat;
-    }
-
-    public static void setChatDefaults(Conversation chat) {
-        int globalMyMessageBackground = PrefUtils.getInstance().getInt(R.string.pref_global_my_message_background);
-        if (globalMyMessageBackground == 0) {
-            globalMyMessageBackground = ContextCompat.getColor(VCApplication.getInstance(),
-                    R.color.outgoing_message_background);
-        }
-        chat.setMyMessageBackground(globalMyMessageBackground);
-
-        int globalMyMessageTextColor = PrefUtils.getInstance().getInt(R.string.pref_global_my_message_text_color);
-        if (globalMyMessageTextColor == 0) {
-            globalMyMessageTextColor = ContextCompat.getColor(VCApplication.getInstance(),
-                    R.color.outgoing_message_text_color);
-        }
-        chat.setMyMessageTextColor(globalMyMessageTextColor);
-
-        int globalFriendMessageBackground = PrefUtils.getInstance().getInt(R.string.pref_global_friend_message_background);
-        if (globalFriendMessageBackground == 0) {
-            globalFriendMessageBackground = ContextCompat.getColor(VCApplication.getInstance(),
-                    R.color.incoming_message_background);
-        }
-        chat.setPartnerMessageBackground(globalFriendMessageBackground);
-
-        int globalFriendMessageTextColor = PrefUtils.getInstance().getInt(R.string.pref_global_friend_message_text_color);
-        if (globalFriendMessageTextColor == 0) {
-            globalFriendMessageTextColor = ContextCompat.getColor(VCApplication.getInstance(),
-                    R.color.incoming_message_text_color);
-        }
-        chat.setPartnerMessageTextColor(globalFriendMessageTextColor);
-
-    }
-
+    /*
     public static void onChatClosed() {
         BeeLog.d(TAG, "onChatClosed");
         openedChat = -1;

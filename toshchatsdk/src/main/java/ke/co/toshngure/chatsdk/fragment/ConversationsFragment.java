@@ -6,7 +6,7 @@
  * Email : anthonyngure25@gmail.com
  */
 
-package ke.co.toshngure.chatapp.fragment;
+package ke.co.toshngure.chatsdk.fragment;
 
 
 import android.app.Activity;
@@ -22,8 +22,8 @@ import java.util.List;
 
 import ke.co.toshngure.basecode.dataloading.DataLoadingConfig;
 import ke.co.toshngure.basecode.dataloading.ModelListFragment;
-import ke.co.toshngure.chatapp.cell.ConversationCell;
-import ke.co.toshngure.chatapp.model.Conversation;
+import ke.co.toshngure.chatsdk.cell.ConversationCell;
+import ke.co.toshngure.chatsdk.model.Conversation;
 
 /**
  * A simple {@link Fragment} subclass.

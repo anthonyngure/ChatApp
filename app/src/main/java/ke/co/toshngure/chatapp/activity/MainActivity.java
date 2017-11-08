@@ -1,4 +1,4 @@
-package ke.co.toshngure.chatapp;
+package ke.co.toshngure.chatapp.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,8 +8,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ke.co.toshngure.basecode.app.BaseAppActivity;
+import ke.co.toshngure.chatapp.R;
 import ke.co.toshngure.chatapp.model.User;
-import ke.co.toshngure.chatsdk.ConversationBuilder;
+import ke.co.toshngure.chatapp.utils.PrefUtils;
+import ke.co.toshngure.chatsdk.ConversationActivity;
+import ke.co.toshngure.chatsdk.model.Conversation;
+import ke.co.toshngure.chatsdk.utils.ConversationUtils;
 
 public class MainActivity extends BaseAppActivity {
 
@@ -18,7 +22,7 @@ public class MainActivity extends BaseAppActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab =  findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show());
     }
@@ -56,9 +60,10 @@ public class MainActivity extends BaseAppActivity {
         partner.setAvatar("https://lorempixel.com/400/400/?43496");
         partner.setName("Carlistars Wanga");
 
-        new ConversationBuilder()
-                .withUser(user)
-                .withPartner(partner)
-                .startConversation(this);
+        Conversation conversation = ConversationUtils
+                .createNewConversation(user, partner, PrefUtils.getInstance());
+
+        ConversationActivity.start(this, conversation, user, partner);
+
     }
 }

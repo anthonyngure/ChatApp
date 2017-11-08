@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016. VibeCampo Social Network
+  ~
+  ~ Website : http://www.vibecampo.com
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".messaging.activity.ChatActivity">
+
+    <item
+        android:id="@+id/action_visible"
+        android:icon="@drawable/ic_visibility_black_24dp"
+        android:title="@string/action_present"
+        android:visible="false"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction"/>
+
+    <item
+        android:id="@+id/action_dummy"
+        android:orderInCategory="100"
+        android:title="Dummy"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_clear"
+        android:orderInCategory="10"
+        android:title="@string/action_clear_conversation"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_chat_colors"
+        android:orderInCategory="10"
+        android:title="@string/action_chat_colors"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_background"
+        android:orderInCategory="10"
+        android:title="@string/action_background"
+        app:showAsAction="never">
+
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/action_no_background"
+                    android:title="@string/action_no_background" />
+                <item
+                    android:id="@+id/action_change_background"
+                    android:title="@string/action_change_background" />
+            </group>
+        </menu>
+
+    </item>
+</menu>

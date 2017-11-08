@@ -23,5 +23,6 @@ public interface BaseUser extends Parcelable {
 
     String getName();
 
+    long getLastSeen();
 
 }
